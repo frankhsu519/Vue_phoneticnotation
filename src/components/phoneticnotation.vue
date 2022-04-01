@@ -92,14 +92,40 @@
     <!-- <v-row>
       <v-btn color="secondary" x-large></v-btn>
     </v-row> -->
+  
+    <!-- 切換按鈕 -->
+    <v-row class="justify-center text-center mb-5">
+      <v-col col='12'>
+        <v-btn v-for="(types) in type" :key="types.name" class=" my-3 mx-2 "  @click="fileter(types)" :class="{'blue-grey darken-1':!types.clicked,'green darken-1':types.clicked}">
+              {{types.name}}
+        </v-btn>
+      </v-col>
+    </v-row>
 
-  <v-row class="justify-center text-center mb-5">
-    <v-btn v-for="(types) in type" :key="types.name" class=" my-3 mx-2 "  @click="fileter(types)" :class="{'blue-grey darken-1':!types.clicked,'green darken-1':types.clicked}">
-          {{types.name}}
-    </v-btn>
-  </v-row>
+    <v-row class="teal accent-3 justify-center align-center text-h1 show_block" style="min-height:300px;">
+      <div v-if="selectType != 'Other'">
+        {{screen_data}}
+      </div>
+      <div v-else style="border:1px solid red;">
+        {{spell_}}
+      </div>
+      <div v-if="selectType == 'Other'" class="show_block_inside1">
+        <v-btn color="yellow" @click="spell_voice(spell_)">
+          voice
+        </v-btn>
+      </div>
+      <div v-if="selectType == 'Other'" class="show_block_inside2">
+        <div class="d-inline-flex flex-column">
+          <v-btn color="red" v-for="notes in note" :key="notes.name" class="mb-3" @click="add_notes(notes)">
+            {{notes.name}}
+          </v-btn>
+        </div>
+      </div>
+    </v-row>
 
 
+
+    <!-- 注音按鈕 -->
     <v-row class="justify-center text-center">
       <div class="d-flex flex-wrap justify-start" style="width:95%;">
         <v-btn v-for="(item,i) in filter_result" :key="i" class="box my-3 mx-2 text-lowercase" color='info' @click='audio(item)'>
@@ -121,6 +147,22 @@
     line-height: 120px;
     background-color:aqua;
   }
+
+  .show_block{
+    position: relative;
+
+    &_inside1{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    &_inside2{
+      position: absolute;
+      left: 0;
+      top:-23px;
+    }
+  }
+
 </style>
 
 
@@ -144,6 +186,10 @@
             },
             {
               name:'Vowel',
+              clicked:false,
+            },
+            {
+              name:'Other',
               clicked:false,
             },
           ],
@@ -378,19 +424,80 @@
               type:'Vowel',
             },
       ],
+      note:[{
+              name:'.(0)',
+              mark:'˙',
+            },
+            {
+              name:' (1)',
+              mark:' ',
+            },
+            {
+              name:'ˊ(2)',
+              mark:'ˊ',
+            },
+            {
+              name:'ˇ(3)',
+              mark:'ˇ',
+            },
+            {
+              name:'ˋ(4)',
+              mark:'ˋ',
+            },
+          ],
+      spell_sound:[
+                    {
+                      id:0,
+                      name:'ㄅ',
+                      secound_sound:[
+                        {
+                          id:0,
+                          s_name:'.(0)',
+                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%99.mp3',
+                        },
+                        {
+                          id:1,
+                          s_name:' (1)',
+                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85.mp3',
+                        },
+                        {
+                          id:2,
+                          s_name:'ˊ(2)',
+                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%8A.mp3',
+                        },
+                        {
+                          id:3,
+                          s_name:'ˇ(3)',
+                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%87.mp3',
+                        },
+                        {
+                          id:4,
+                          s_name:'ˋ(4)',
+                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%8B.mp3',
+                        },
+                      ]
+                    }
+                  ],
       filter_result:[],
       selectType:'All',
+      screen_data:'',
+      spell_:'',
     }),
     methods:{
       audio(item){
         var audio = new Audio(item.audio)
         audio.play();
+        
+        this.show_data(item)
       },
       fileter(send_type){
         this.changeColor(send_type)
         // send_type.clicked = true;
         this.selectType = send_type.name ;
         if(this.selectType == 'All'){
+          this.filter_result = [...this.test];
+        }else if(this.selectType == 'Other'){
+          alert('拼寫模式')
           this.filter_result = [...this.test];
         }else{
           this.filter_result = this.test.filter(data =>{
@@ -404,6 +511,31 @@
         }
         send_type.clicked = true;
       },
+      show_data(send_data){
+        if(this.selectType != 'Other'){
+          this.screen_data = send_data.name;
+        }
+        else{
+          this.spell_ += send_data.name
+        }
+      },
+      spell_voice(send_spell){
+        console.log('送進來的',send_spell);
+        var tmp_str = send_spell.split('')
+        console.log(tmp_str);
+        console.log(tmp_str[0]);
+        // this.find_first_voice(tmp_str[0])
+      },
+      add_notes(send_notes){
+        this.spell_ += send_notes.mark;
+      },
+      find_first_voice(first_str){
+        for (let i = 0 ; i < this.spell_sound.length ; i++){
+          if(this.spell_sound[i].name == first_str ){
+            
+          }
+        }
+      }
     },
     mounted(){
       this.fileter(this.type[0])
