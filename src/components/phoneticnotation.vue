@@ -106,14 +106,14 @@
       <div v-if="selectType != 'Other'">
         {{screen_data}}
       </div>
-      <div v-else style="border:1px solid red;">
+      <div v-else>
         {{spell_}}
       </div>
-      <!-- <div v-if="selectType == 'Other'" class="show_block_inside1">
+      <div v-if="selectType == 'Other'" class="show_block_inside1">
         <v-btn color="yellow" @click="spell_voice(spell_spciel)">
           voice
         </v-btn>
-      </div> -->
+      </div>
       <div v-if="selectType == 'Other'" class="show_block_inside3">
         <v-btn color="red" @click="clear()">
           clear
@@ -127,16 +127,7 @@
         </div>
       </div>
 
-      <!-- test -->
-        <div v-if="selectType == 'Other'" class="show_block_inside4">
-        <v-btn color="yellow" @click="test_voice(spell_spciel)">
-          voice test
-        </v-btn>
-      </div>
-      <!-- test -->
     </v-row>
-
-
 
     <!-- 注音按鈕 -->
     <v-row class="justify-center text-center">
@@ -190,9 +181,6 @@
 
 
 <script>
-  // import soundData from "./data.json";
-  // import testData from "./data2.json";
-
   export default {
     name: 'HelloWorld',
     components:{
@@ -471,17 +459,13 @@
               mark:'ˋ',
             },
           ],
-      // spell_sound:soundData,
+
       filter_result:[],
       selectType:'',
       screen_data:'',
       spell_:'',
       current_spell_:'',
       spell_spciel: [],
-
-      // 測試中
-      // testAll:testData,
-      // 
 
     }),
     methods:{
@@ -574,9 +558,7 @@
         this.spell_spciel = [];
       },
 
-    // test
-    
-    test_voice(send_spell){
+    spell_voice(send_spell){
         console.log('送進來的',send_spell);
 
         var that = this;
@@ -600,9 +582,7 @@
           }, 1000 * i)
         }
 
-
-
-      }
+      },
     },
     mounted(){
       this.fileter(this.type[0])
