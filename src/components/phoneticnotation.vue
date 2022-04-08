@@ -109,9 +109,14 @@
       <div v-else style="border:1px solid red;">
         {{spell_}}
       </div>
-      <div v-if="selectType == 'Other'" class="show_block_inside1">
-        <v-btn color="yellow" @click="spell_voice(spell_)">
+      <!-- <div v-if="selectType == 'Other'" class="show_block_inside1">
+        <v-btn color="yellow" @click="spell_voice(spell_spciel)">
           voice
+        </v-btn>
+      </div> -->
+      <div v-if="selectType == 'Other'" class="show_block_inside3">
+        <v-btn color="red" @click="clear()">
+          clear
         </v-btn>
       </div>
       <div v-if="selectType == 'Other'" class="show_block_inside2">
@@ -121,6 +126,14 @@
           </v-btn>
         </div>
       </div>
+
+      <!-- test -->
+        <div v-if="selectType == 'Other'" class="show_block_inside4">
+        <v-btn color="yellow" @click="test_voice(spell_spciel)">
+          voice test
+        </v-btn>
+      </div>
+      <!-- test -->
     </v-row>
 
 
@@ -161,12 +174,25 @@
       left: 0;
       top:-23px;
     }
+    &_inside3{
+      position: absolute;
+      right: 0;
+      top:130px;
+    }
+    &_inside4{
+      position: absolute;
+      right: 0;
+      bottom:0;
+    }
   }
 
 </style>
 
 
 <script>
+  // import soundData from "./data.json";
+  // import testData from "./data2.json";
+
   export default {
     name: 'HelloWorld',
     components:{
@@ -445,43 +471,18 @@
               mark:'ˋ',
             },
           ],
-      spell_sound:[
-                    {
-                      id:0,
-                      name:'ㄅ',
-                      secound_sound:[
-                        {
-                          id:0,
-                          s_name:'.(0)',
-                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%99.mp3',
-                        },
-                        {
-                          id:1,
-                          s_name:' (1)',
-                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85.mp3',
-                        },
-                        {
-                          id:2,
-                          s_name:'ˊ(2)',
-                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%8A.mp3',
-                        },
-                        {
-                          id:3,
-                          s_name:'ˇ(3)',
-                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%87.mp3',
-                        },
-                        {
-                          id:4,
-                          s_name:'ˋ(4)',
-                          audio:'https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%8B.mp3',
-                        },
-                      ]
-                    }
-                  ],
+      // spell_sound:soundData,
       filter_result:[],
-      selectType:'All',
+      selectType:'',
       screen_data:'',
       spell_:'',
+      current_spell_:'',
+      spell_spciel: [],
+
+      // 測試中
+      // testAll:testData,
+      // 
+
     }),
     methods:{
       audio(item){
@@ -516,25 +517,91 @@
           this.screen_data = send_data.name;
         }
         else{
-          this.spell_ += send_data.name
+          this.spell_ += send_data.name;
+          this.current_spell_ += send_data.name;
         }
       },
-      spell_voice(send_spell){
-        console.log('送進來的',send_spell);
-        var tmp_str = send_spell.split('')
-        console.log(tmp_str);
-        console.log(tmp_str[0]);
-        // this.find_first_voice(tmp_str[0])
-      },
+      // spell_voice(send_spell){
+      //   console.log('送進來的',send_spell);
+
+      //   var that = this;
+      //   for(let i = 0; i < send_spell.length ;i++){
+      //     let first_spell_str = send_spell[i].split('',1);
+      //     let other_spell_str = send_spell[i].split('');
+      //     other_spell_str.splice(0,1)
+      //     other_spell_str = other_spell_str.join('')
+      //     console.log('這是字first_spell_str:',first_spell_str);
+      //     console.log('這是other_spell_str:',other_spell_str);
+          
+      //     setTimeout(function(){
+      //       that.find_first_voice(first_spell_str,other_spell_str)
+      //     }, 1000 * i)
+      //   }
+
+      // },
       add_notes(send_notes){
         this.spell_ += send_notes.mark;
+        this.current_spell_+= send_notes.mark;
+        this.spell_spciel.push(this.current_spell_);
+        this.current_spell_ ='';
       },
-      find_first_voice(first_str){
-        for (let i = 0 ; i < this.spell_sound.length ; i++){
-          if(this.spell_sound[i].name == first_str ){
-            
+      // find_first_voice(first_str,other_spell_str){
+      //   for (let i = 0 ; i < this.spell_sound.length ; i++){
+      //     if(this.spell_sound[i].name == first_str ){
+      //       var first_sound = this.spell_sound[i];
+      //       // console.log('check',first_sound);
+      //         this.find_toned(first_sound,other_spell_str)
+      //     }
+      //   }
+      // },
+
+      // find_toned(first_sound,other_spell_str){
+      //     for(let j = 0 ;j < first_sound.secound_sound.length ; j++){
+      //       if(first_sound.secound_sound[j].s_name == other_spell_str){
+      //         this.spell_audio(first_sound.secound_sound[j])
+      //           console.log('發音', first_sound.secound_sound[j]);
+      //       }
+      //     }
+      // },
+      spell_audio(send_data){
+        var audio = new Audio(send_data.audio)
+        audio.play();
+        // this.spell_ =''
+      },
+      clear(){
+        this.spell_= '';
+        this.current_spell_= '';
+        this.spell_spciel = [];
+      },
+
+    // test
+    
+    test_voice(send_spell){
+        console.log('送進來的',send_spell);
+
+        var that = this;
+
+        for (let i = 0 ; i < send_spell.length ;i++ ){
+          console.log(send_spell[i]);
+          var that = this;
+          console.log('看一下轉化的東西',encodeURI(send_spell[i]));
+          let send_Data = {};
+          send_Data.toUnicode = encodeURI(send_spell[i])
+          if(send_Data.toUnicode < encodeURI('ㄏㄟ ')){
+            send_Data.audio = `https://github.com/frankhsu519/spell_sound1/raw/master/${send_Data.toUnicode}.mp3`
+          }else if(send_Data.toUnicode < encodeURI('ㄨㄢ ')){
+            send_Data.audio = `https://github.com/frankhsu519/spell_sound2/raw/master/${send_Data.toUnicode}.mp3`
+          }else{
+            send_Data.audio = `https://github.com/frankhsu519/spell_sound3/raw/master/${send_Data.toUnicode}.mp3`
           }
+
+          setTimeout(function(){
+            that.spell_audio(send_Data)
+          }, 1000 * i)
         }
+
+
+
       }
     },
     mounted(){

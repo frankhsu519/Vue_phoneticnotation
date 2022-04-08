@@ -1,0 +1,890 @@
+
+[
+    {
+        "id": 0,
+        "name": "ㄅ",
+        "secound_sound": [
+            {
+                "id": 0,
+                "s_name": "˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%99.mp3"
+            },
+            {
+                "id": 1,
+                "s_name": " ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85.mp3"
+            },
+            {
+                "id": 2,
+                "s_name": "ˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%8A.mp3"
+            },
+            {
+                "id": 3,
+                "s_name": "ˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%87.mp3"
+            },
+            {
+                "id": 4,
+                "s_name": "ˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%CB%8B.mp3"
+            },
+            {
+                "id": 5,
+                "s_name": "ㄚ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9A%CB%99.mp3"
+            },
+            {
+                "id": 6,
+                "s_name": "ㄚ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9A.mp3"
+            },
+            {
+                "id": 7,
+                "s_name": "ㄚˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9A%CB%8A.mp3"
+            },
+            {
+                "id": 8,
+                "s_name": "ㄚˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9A%CB%87.mp3"
+            },
+            {
+                "id": 9,
+                "s_name": "ㄚˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9A%CB%8B.mp3"
+            },
+            {
+                "id": 10,
+                "s_name": "ㄛ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9B%CB%99.mp3"
+            },
+            {
+                "id": 11,
+                "s_name": "ㄛ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9B.mp3"
+            },
+            {
+                "id": 12,
+                "s_name": "ㄛˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9B%CB%8A.mp3"
+            },
+            {
+                "id": 13,
+                "s_name": "ㄛˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9B%CB%87.mp3"
+            },
+            {
+                "id": 14,
+                "s_name": "ㄛˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9B%CB%8B.mp3"
+            },
+            {
+                "id": 15,
+                "s_name": "ㄞ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9E%CB%99.mp3"
+            },
+            {
+                "id": 16,
+                "s_name": "ㄞ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9E.mp3"
+            },
+            {
+                "id": 17,
+                "s_name": "ㄞˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9E%CB%8A.mp3"
+            },
+            {
+                "id": 18,
+                "s_name": "ㄞˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9E%CB%87.mp3"
+            },
+            {
+                "id": 19,
+                "s_name": "ㄞˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9E%CB%8B.mp3"
+            },
+            {
+                "id": 20,
+                "s_name": "ㄟ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9F%CB%99.mp3"
+            },
+            {
+                "id": 21,
+                "s_name": "ㄟ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9F.mp3"
+            },
+            {
+                "id": 22,
+                "s_name": "ㄟˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9F%CB%8A.mp3"
+            },
+            {
+                "id": 23,
+                "s_name": "ㄟˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9F%CB%87.mp3"
+            },
+            {
+                "id": 24,
+                "s_name": "ㄟˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%9F%CB%8B.mp3"
+            },
+            {
+                "id": 25,
+                "s_name": "ㄠ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A0%CB%99.mp3"
+            },
+            {
+                "id": 26,
+                "s_name": "ㄠ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A0.mp3"
+            },
+            {
+                "id": 27,
+                "s_name": "ㄠˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A0%CB%8A.mp3"
+            },
+            {
+                "id": 28,
+                "s_name": "ㄠˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A0%CB%87.mp3"
+            },
+            {
+                "id": 29,
+                "s_name": "ㄠˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A0%CB%8B.mp3"
+            },
+            {
+                "id": 30,
+                "s_name": "ㄢ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A2%CB%99.mp3"
+            },
+            {
+                "id": 31,
+                "s_name": "ㄢ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A2.mp3"
+            },
+            {
+                "id": 32,
+                "s_name": "ㄢˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A2%CB%8A.mp3"
+            },
+            {
+                "id": 33,
+                "s_name": "ㄢˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A2%CB%87.mp3"
+            },
+            {
+                "id": 34,
+                "s_name": "ㄢˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A2%CB%8B.mp3"
+            },
+            {
+                "id": 35,
+                "s_name": "ㄣ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A3%CB%99.mp3"
+            },
+            {
+                "id": 36,
+                "s_name": "ㄣ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A3.mp3"
+            },
+            {
+                "id": 37,
+                "s_name": "ㄣˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A3%CB%8A.mp3"
+            },
+            {
+                "id": 38,
+                "s_name": "ㄣˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A3%CB%87.mp3"
+            },
+            {
+                "id": 39,
+                "s_name": "ㄣˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A3%CB%8B.mp3"
+            },
+            {
+                "id": 40,
+                "s_name": "ㄤ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A4%CB%99.mp3"
+            },
+            {
+                "id": 41,
+                "s_name": "ㄤ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A4.mp3"
+            },
+            {
+                "id": 42,
+                "s_name": "ㄤˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A4%CB%8A.mp3"
+            },
+            {
+                "id": 43,
+                "s_name": "ㄤˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A4%CB%87.mp3"
+            },
+            {
+                "id": 44,
+                "s_name": "ㄤˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A4%CB%8B.mp3"
+            },
+            {
+                "id": 45,
+                "s_name": "ㄥ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A5%CB%99.mp3"
+            },
+            {
+                "id": 46,
+                "s_name": "ㄥ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A5.mp3"
+            },
+            {
+                "id": 47,
+                "s_name": "ㄥˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A5%CB%8A.mp3"
+            },
+            {
+                "id": 48,
+                "s_name": "ㄥˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A5%CB%87.mp3"
+            },
+            {
+                "id": 49,
+                "s_name": "ㄥˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A5%CB%8B.mp3"
+            },
+            {
+                "id": 50,
+                "s_name": "一˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%CB%99.mp3"
+            },
+            {
+                "id": 51,
+                "s_name": "一 ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7.mp3"
+            },
+            {
+                "id": 52,
+                "s_name": "一ˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%CB%8A.mp3"
+            },
+            {
+                "id": 53,
+                "s_name": "一ˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%CB%87.mp3"
+            },
+            {
+                "id": 54,
+                "s_name": "一ˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%CB%8B.mp3"
+            },
+            {
+                "id": 55,
+                "s_name": "一ㄝ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%9D%CB%99.mp3"
+            },
+            {
+                "id": 56,
+                "s_name": "一ㄝ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%9D.mp3"
+            },
+            {
+                "id": 57,
+                "s_name": "一ㄝˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%9D%CB%8A.mp3"
+            },
+            {
+                "id": 58,
+                "s_name": "一ㄝˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%9D%CB%87.mp3"
+            },
+            {
+                "id": 59,
+                "s_name": "一ㄝˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%9D%CB%8B.mp3"
+            },
+            {
+                "id": 60,
+                "s_name": "一ㄠ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A0%CB%99.mp3"
+            },
+            {
+                "id": 61,
+                "s_name": "一ㄠ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A0.mp3"
+            },
+            {
+                "id": 62,
+                "s_name": "一ㄠˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A0%CB%8A.mp3"
+            },
+            {
+                "id": 63,
+                "s_name": "一ㄠˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A0%CB%87.mp3"
+            },
+            {
+                "id": 64,
+                "s_name": "一ㄠˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A0%CB%8B.mp3"
+            },
+            {
+                "id": 65,
+                "s_name": "一ㄢ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A2%CB%99.mp3"
+            },
+            {
+                "id": 66,
+                "s_name": "一ㄢ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A2.mp3"
+            },
+            {
+                "id": 67,
+                "s_name": "一ㄢˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A2%CB%8A.mp3"
+            },
+            {
+                "id": 68,
+                "s_name": "一ㄢˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A2%CB%87.mp3"
+            },
+            {
+                "id": 69,
+                "s_name": "一ㄢˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A2%CB%8B.mp3"
+            },
+            {
+                "id": 70,
+                "s_name": "一ㄣ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A3%CB%99.mp3"
+            },
+            {
+                "id": 71,
+                "s_name": "一ㄣ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A3.mp3"
+            },
+            {
+                "id": 72,
+                "s_name": "一ㄣˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A3%CB%8A.mp3"
+            },
+            {
+                "id": 73,
+                "s_name": "一ㄣˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A3%CB%87.mp3"
+            },
+            {
+                "id": 74,
+                "s_name": "一ㄣˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A3%CB%8B.mp3"
+            },
+            {
+                "id": 75,
+                "s_name": "一ㄥ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A5%CB%99.mp3"
+            },
+            {
+                "id": 76,
+                "s_name": "一ㄥ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A5.mp3"
+            },
+            {
+                "id": 77,
+                "s_name": "一ㄥˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A5%CB%8A.mp3"
+            },
+            {
+                "id": 78,
+                "s_name": "一ㄥˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A5%CB%87.mp3"
+            },
+            {
+                "id": 79,
+                "s_name": "一ㄥˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A7%E3%84%A5%CB%8B.mp3"
+            },
+            {
+                "id": 80,
+                "s_name": "ㄨ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A8%CB%99.mp3"
+            },
+            {
+                "id": 81,
+                "s_name": "ㄨ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A8.mp3"
+            },
+            {
+                "id": 82,
+                "s_name": "ㄨˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A8%CB%8A.mp3"
+            },
+            {
+                "id": 83,
+                "s_name": "ㄨˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A8%CB%87.mp3"
+            },
+            {
+                "id": 84,
+                "s_name": "ㄨˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%85%E3%84%A8%CB%8B.mp3"
+            } 
+        ]
+    },
+    {
+        "id":1,
+        "name": "ㄆ",
+        "secound_sound": [
+            {
+                "id": 0,
+                "s_name": "˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%CB%99.mp3"
+            },
+            {
+                "id": 1,
+                "s_name": " ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86.mp3"
+            },
+            {
+                "id": 2,
+                "s_name": "ˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%CB%8A.mp3"
+            },
+            {
+                "id": 3,
+                "s_name": "ˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%CB%87.mp3"
+            },
+            {
+                "id": 4,
+                "s_name": "ˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%CB%8B.mp3"
+            },
+            {
+                "id": 5,
+                "s_name": "ㄚ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9A%CB%99.mp3"
+            },
+            {
+                "id": 6,
+                "s_name": "ㄚ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9A.mp3"
+            },
+            {
+                "id": 7,
+                "s_name": "ㄚˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9A%CB%8A.mp3"
+            },
+            {
+                "id": 8,
+                "s_name": "ㄚˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9A%CB%87.mp3"
+            },
+            {
+                "id": 9,
+                "s_name": "ㄚˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9A%CB%8B.mp3"
+            },
+            {
+                "id": 10,
+                "s_name": "ㄛ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9B%CB%99.mp3"
+            },
+            {
+                "id": 11,
+                "s_name": "ㄛ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9B.mp3"
+            },
+            {
+                "id": 12,
+                "s_name": "ㄛˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9B%CB%8A.mp3"
+            },
+            {
+                "id": 13,
+                "s_name": "ㄛˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9B%CB%87.mp3"
+            },
+            {
+                "id": 14,
+                "s_name": "ㄛˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9B%CB%8B.mp3"
+            },
+            {
+                "id": 15,
+                "s_name": "ㄞ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9E%CB%99.mp3"
+            },
+            {
+                "id": 16,
+                "s_name": "ㄞ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9E.mp3"
+            },
+            {
+                "id": 17,
+                "s_name": "ㄞˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9E%CB%8A.mp3"
+            },
+            {
+                "id": 18,
+                "s_name": "ㄞˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9E%CB%87.mp3"
+            },
+            {
+                "id": 19,
+                "s_name": "ㄞˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9E%CB%8B.mp3"
+            },
+            {
+                "id": 20,
+                "s_name": "ㄟ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9F%CB%99.mp3"
+            },
+            {
+                "id": 21,
+                "s_name": "ㄟ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9F.mp3"
+            },
+            {
+                "id": 22,
+                "s_name": "ㄟˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9F%CB%8A.mp3"
+            },
+            {
+                "id": 23,
+                "s_name": "ㄟˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9F%CB%87.mp3"
+            },
+            {
+                "id": 24,
+                "s_name": "ㄟˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%9F%CB%8B.mp3"
+            },
+            {
+                "id": 25,
+                "s_name": "ㄠ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A0%CB%99.mp3"
+            },
+            {
+                "id": 26,
+                "s_name": "ㄠ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A0.mp3"
+            },
+            {
+                "id": 27,
+                "s_name": "ㄠˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A0%CB%8A.mp3"
+            },
+            {
+                "id": 28,
+                "s_name": "ㄠˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A0%CB%87.mp3"
+            },
+            {
+                "id": 29,
+                "s_name": "ㄠˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A0%CB%8B.mp3"
+            },
+            {
+                "id": 30,
+                "s_name": "ㄢ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A2%CB%99.mp3"
+            },
+            {
+                "id": 31,
+                "s_name": "ㄢ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A2.mp3"
+            },
+            {
+                "id": 32,
+                "s_name": "ㄢˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A2%CB%8A.mp3"
+            },
+            {
+                "id": 33,
+                "s_name": "ㄢˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A2%CB%87.mp3"
+            },
+            {
+                "id": 34,
+                "s_name": "ㄢˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A2%CB%8B.mp3"
+            },
+            {
+                "id": 35,
+                "s_name": "ㄣ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A3%CB%99.mp3"
+            },
+            {
+                "id": 36,
+                "s_name": "ㄣ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A3.mp3"
+            },
+            {
+                "id": 37,
+                "s_name": "ㄣˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A3%CB%8A.mp3"
+            },
+            {
+                "id": 38,
+                "s_name": "ㄣˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A3%CB%87.mp3"
+            },
+            {
+                "id": 39,
+                "s_name": "ㄣˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A3%CB%8B.mp3"
+            },
+            {
+                "id": 40,
+                "s_name": "ㄤ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A4%CB%99.mp3"
+            },
+            {
+                "id": 41,
+                "s_name": "ㄤ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A4.mp3"
+            },
+            {
+                "id": 42,
+                "s_name": "ㄤˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A4%CB%8A.mp3"
+            },
+            {
+                "id": 43,
+                "s_name": "ㄤˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A4%CB%87.mp3"
+            },
+            {
+                "id": 44,
+                "s_name": "ㄤˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A4%CB%8B.mp3"
+            },
+            {
+                "id": 45,
+                "s_name": "ㄥ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A5%CB%99.mp3"
+            },
+            {
+                "id": 46,
+                "s_name": "ㄥ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A5.mp3"
+            },
+            {
+                "id": 47,
+                "s_name": "ㄥˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A5%CB%8A.mp3"
+            },
+            {
+                "id": 48,
+                "s_name": "ㄥˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A5%CB%87.mp3"
+            },
+            {
+                "id": 49,
+                "s_name": "ㄥˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A5%CB%8B.mp3"
+            },
+            {
+                "id": 50,
+                "s_name": "一˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%CB%99.mp3"
+            },
+            {
+                "id": 51,
+                "s_name": "一 ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7.mp3"
+            },
+            {
+                "id": 52,
+                "s_name": "一ˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%CB%8A.mp3"
+            },
+            {
+                "id": 53,
+                "s_name": "一ˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%CB%87.mp3"
+            },
+            {
+                "id": 54,
+                "s_name": "一ˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%CB%8B.mp3"
+            },
+            {
+                "id": 55,
+                "s_name": "一ㄝ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%9D%CB%99.mp3"
+            },
+            {
+                "id": 56,
+                "s_name": "一ㄝ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%9D.mp3"
+            },
+            {
+                "id": 57,
+                "s_name": "一ㄝˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%9D%CB%8A.mp3"
+            },
+            {
+                "id": 58,
+                "s_name": "一ㄝˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%9D%CB%87.mp3"
+            },
+            {
+                "id": 59,
+                "s_name": "一ㄝˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%9D%CB%8B.mp3"
+            },
+            {
+                "id": 60,
+                "s_name": "一ㄠ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A0%CB%99.mp3"
+            },
+            {
+                "id": 61,
+                "s_name": "一ㄠ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A0.mp3"
+            },
+            {
+                "id": 62,
+                "s_name": "一ㄠˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A0%CB%8A.mp3"
+            },
+            {
+                "id": 63,
+                "s_name": "一ㄠˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A0%CB%87.mp3"
+            },
+            {
+                "id": 64,
+                "s_name": "一ㄠˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A0%CB%8B.mp3"
+            },
+            {
+                "id": 65,
+                "s_name": "一ㄢ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A2%CB%99.mp3"
+            },
+            {
+                "id": 66,
+                "s_name": "一ㄢ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A2.mp3"
+            },
+            {
+                "id": 67,
+                "s_name": "一ㄢˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A2%CB%8A.mp3"
+            },
+            {
+                "id": 68,
+                "s_name": "一ㄢˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A2%CB%87.mp3"
+            },
+            {
+                "id": 69,
+                "s_name": "一ㄢˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A2%CB%8B.mp3"
+            },
+            {
+                "id": 70,
+                "s_name": "一ㄣ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A3%CB%99.mp3"
+            },
+            {
+                "id": 71,
+                "s_name": "一ㄣ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A3.mp3"
+            },
+            {
+                "id": 72,
+                "s_name": "一ㄣˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A3%CB%8A.mp3"
+            },
+            {
+                "id": 73,
+                "s_name": "一ㄣˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A3%CB%87.mp3"
+            },
+            {
+                "id": 74,
+                "s_name": "一ㄣˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A3%CB%8B.mp3"
+            },
+            {
+                "id": 75,
+                "s_name": "一ㄥ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A5%CB%99.mp3"
+            },
+            {
+                "id": 76,
+                "s_name": "一ㄥ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A5.mp3"
+            },
+            {
+                "id": 77,
+                "s_name": "一ㄥˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A5%CB%8A.mp3"
+            },
+            {
+                "id": 78,
+                "s_name": "一ㄥˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A5%CB%87.mp3"
+            },
+            {
+                "id": 79,
+                "s_name": "一ㄥˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A7%E3%84%A5%CB%8B.mp3"
+            },
+            {
+                "id": 80,
+                "s_name": "ㄨ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A8%CB%99.mp3"
+            },
+            {
+                "id": 81,
+                "s_name": "ㄨ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A8.mp3"
+            },
+            {
+                "id": 82,
+                "s_name": "ㄨˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A8%CB%8A.mp3"
+            },
+            {
+                "id": 83,
+                "s_name": "ㄨˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A8%CB%87.mp3"
+            },
+            {
+                "id": 84,
+                "s_name": "ㄨˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A8%CB%8B.mp3"
+            },
+            {
+                "id": 85,
+                "s_name": "ㄡ˙",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A1%CB%99.mp3"
+            },
+            {
+                "id": 86,
+                "s_name": "ㄡ ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A1.mp3"
+            },
+            {
+                "id": 87,
+                "s_name": "ㄡˊ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A1%CB%8A.mp3"
+            },
+            {
+                "id": 88,
+                "s_name": "ㄡˇ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A1%CB%87.mp3"
+            },
+            {
+                "id": 84,
+                "s_name": "ㄡˋ",
+                "audio": "https://github.com/frankhsu519/spell_sound1/raw/master/%E3%84%86%E3%84%A1%CB%8B.mp3"
+            }
+        ]
+    }
+]
