@@ -548,9 +548,40 @@
       //     }
       // },
       spell_audio(send_data){
-        var audio = new Audio(send_data.audio)
-        audio.play();
-        // this.spell_ =''
+        let check_array = []
+        let check_res = false;
+
+        // switch(send_data.check){
+        //   case '1':
+        //     check_array = {...this.api_data1}
+        //     break;
+        //   case '2':
+        //     check_array = {...this.api_data2}
+        //     break;
+        //   case '3':
+        //     check_array = {...this.api_data3}
+        //     break;  
+        // }
+
+        if(send_data.check == '1'){
+          check_array = [...this.api_data1]
+        }else if(send_data.check == '2'){
+          check_array = [...this.api_data2]
+        }else{
+          check_array = [...this.api_data3]
+        }
+
+        for( let i = 0 ; i < check_array.length ;i++){
+          if(send_data.html_url == check_array[i].html_url){
+            check_res = true;
+          }
+        }
+        if(check_res){
+          var audio = new Audio(send_data.audio)
+            audio.play();
+        }else{
+          alert('沒有此音檔')
+        }
       },
       clear(){
         this.spell_= '';
@@ -558,7 +589,7 @@
         this.spell_spciel = [];
       },
 
-    spell_voice(send_spell){
+      spell_voice(send_spell){
         console.log('送進來的',send_spell);
 
         var that = this;
@@ -570,11 +601,17 @@
           let send_Data = {};
           send_Data.toUnicode = encodeURI(send_spell[i])
           if(send_Data.toUnicode < encodeURI('ㄏㄟ ')){
-            send_Data.audio = `https://github.com/frankhsu519/spell_sound1/raw/master/${send_Data.toUnicode}.mp3`
+            send_Data.audio = `https://github.com/frankhsu519/spell_sound1/raw/master/${send_Data.toUnicode}.mp3`;
+            send_Data.html_url=`https://github.com/frankhsu519/spell_sound1/blob/master/${send_Data.toUnicode}.mp3`;
+            send_Data.check = '1';
           }else if(send_Data.toUnicode < encodeURI('ㄨㄢ ')){
-            send_Data.audio = `https://github.com/frankhsu519/spell_sound2/raw/master/${send_Data.toUnicode}.mp3`
+            send_Data.audio = `https://github.com/frankhsu519/spell_sound2/raw/master/${send_Data.toUnicode}.mp3`;
+            send_Data.html_url=`https://github.com/frankhsu519/spell_sound2/blob/master/${send_Data.toUnicode}.mp3`;
+            send_Data.check = '2';
           }else{
-            send_Data.audio = `https://github.com/frankhsu519/spell_sound3/raw/master/${send_Data.toUnicode}.mp3`
+            send_Data.audio = `https://github.com/frankhsu519/spell_sound3/raw/master/${send_Data.toUnicode}.mp3`;
+            send_Data.html_url=`https://github.com/frankhsu519/spell_sound3/blob/master/${send_Data.toUnicode}.mp3`;
+            send_Data.check = '3';
           }
 
           setTimeout(function(){
@@ -583,9 +620,51 @@
         }
 
       },
+      getApi_data(){
+        this.axios.get(`https://api.github.com/repos/frankhsu519/spell_sound1/contents`)
+            .then( (response) => {
+                // console.log(response)
+                if(response.status =='200'){
+                  this.api_data1 = response.data;
+                }
+              }
+            )
+            .catch( (error) => {
+                console.log(error)
+                alert('找不到1')
+              }
+            )
+        this.axios.get(`https://api.github.com/repos/frankhsu519/spell_sound2/contents`)
+            .then( (response) => {
+                // console.log(response)
+                if(response.status =='200'){
+                  this.api_data2 = response.data;
+                }
+              }
+            )
+            .catch( (error) => {
+                console.log(error)
+                alert('找不到2')
+              }
+            )
+        this.axios.get(`https://api.github.com/repos/frankhsu519/spell_sound3/contents`)
+            .then( (response) => {
+                // console.log(response)
+                if(response.status =='200'){
+                  this.api_data3 = response.data;
+                }
+              }
+            )
+            .catch( (error) => {
+                console.log(error)
+                alert('找不到3')
+              }
+            )
+      }
     },
     mounted(){
       this.fileter(this.type[0])
+      this.getApi_data()
     }
   }
 </script>
