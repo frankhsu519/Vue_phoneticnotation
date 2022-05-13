@@ -107,10 +107,17 @@
         {{screen_data}}
       </div>
       <div v-else>
-        {{spell_}}
+        {{spell_}}<br>
+        <!-- {{spell_pinyin}} -->
+
+        <div style="display:flex;">
+          <div v-for="(arr,i) in pinyin_arr " :key="i" v-show ="arr.length != 0">
+            [{{arr}}] &nbsp;
+          </div>
+        </div>
       </div>
       <div v-if="selectType == 'Other'" class="show_block_inside1">
-        <v-btn color="yellow" @click="spell_voice(spell_spciel)">
+        <v-btn color="yellow" @click="spell_voice(spell_array)">
           voice
         </v-btn>
       </div>
@@ -130,8 +137,8 @@
     </v-row>
 
     <!-- 注音按鈕 -->
-    <v-row class="justify-center text-center">
-      <div class="d-flex flex-wrap justify-start" style="width:95%;">
+    <v-row>
+      <div class="d-flex flex-wrap justify-start">
         <v-btn v-for="(item,i) in filter_result" :key="i" class="box my-3 mx-2 text-lowercase" color='info' @click='audio(item)'>
           {{item.name}}<br>
           {{item.pinyin}}
@@ -211,6 +218,7 @@
               id:0,
               name:'ㄅ',
               pinyin:'[b]',
+              pinyin_mark:'b',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%85.WAV',
               type:'Consonant',
             },
@@ -218,6 +226,7 @@
               id:1,
               name:'ㄆ',
               pinyin:'[p]',
+              pinyin_mark:'p', 
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%86.WAV',
               type:'Consonant',
             },
@@ -225,6 +234,7 @@
               id:2,
               name:'ㄇ',
               pinyin:'[m]',
+              pinyin_mark:'m',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%87.WAV',
               type:'Consonant',
             },
@@ -232,6 +242,7 @@
               id:3,
               name:'ㄈ',
               pinyin:'[f]',
+              pinyin_mark:'f',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%88.WAV',
               type:'Consonant',
             },
@@ -239,6 +250,7 @@
               id:4,
               name:'ㄉ',
               pinyin:'[d]',
+              pinyin_mark:'d',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%89.WAV',
               type:'Consonant',
             },
@@ -246,6 +258,7 @@
               id:5,
               name:'ㄊ',
               pinyin:'[t]',
+              pinyin_mark:'t',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%8A.WAV',
               type:'Consonant',
             },
@@ -253,12 +266,14 @@
               id:6,
               name:'ㄋ',
               pinyin:'[n]',
+              pinyin_mark:'n',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%8B.WAV',
               type:'Consonant',
             },
             {id:7,
               name:'ㄌ',
               pinyin:'[l]',
+              pinyin_mark:'l',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%8C.WAV',
               type:'Consonant',
             },
@@ -266,174 +281,203 @@
               id:8,
               name:'ㄍ',
               pinyin:'[g]',
+              pinyin_mark:'g',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%8D.WAV',
               type:'Consonant',
             },
             {id:9,
               name:'ㄎ',
               pinyin:'[k]',
+              pinyin_mark:'k',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%8E.WAV',
               type:'Consonant',
             },
             {id:10,
               name:'ㄏ',
               pinyin:'[h]',
+              pinyin_mark:'h',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%8F.WAV',
               type:'Consonant',
             },
             {id:11,
               name:'ㄐ',
               pinyin:'[j]',
+              pinyin_mark:'j',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%90.WAV',
               type:'Consonant',
             },
             {id:12,
               name:'ㄑ',
               pinyin:'[q]',
+              pinyin_mark:'q',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%91.WAV',
               type:'Consonant',
             },
             {id:13,
               name:'ㄒ',
               pinyin:'[x]',
+              pinyin_mark:'x',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%92.WAV',
               type:'Consonant',
             },
             {id:14,
               name:'ㄓ',
               pinyin:'[zh]',
+              pinyin_mark:'zh',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%93.WAV',
               type:'Consonant',
             },
             {id:15,
               name:'ㄔ',
               pinyin:'[ch]',
+              pinyin_mark:'ch',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%94.WAV',
               type:'Consonant',
             },
             {id:16,
               name:'ㄕ',
               pinyin:'[sh]',
+              pinyin_mark:'sh',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%95.WAV',
               type:'Consonant',
             },
             {id:17,
               name:'ㄖ',
               pinyin:'[r]',
+              pinyin_mark:'r',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%96.WAV',
               type:'Consonant',
             },
             {id:18,
               name:'ㄗ',
               pinyin:'[z]',
+              pinyin_mark:'z',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%97.WAV',
               type:'Consonant',
             },
             {id:19,
               name:'ㄘ',
               pinyin:'[c]',
+              pinyin_mark:'c',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%98.WAV',
               type:'Consonant',
             },
             {id:20,
               name:'ㄙ',
               pinyin:'[s]',
+              pinyin_mark:'s',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%99.WAV',
               type:'Consonant',
             },
             {id:21,
               name:'一',
               pinyin:'[i]',
+              pinyin_mark:'i',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A7.WAV',
               type:'HeadVowel',
             },
             {id:22,
               name:'ㄨ',
               pinyin:'[wu]',
+              pinyin_mark:'wu',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A8.WAV',
               type:'HeadVowel',
             },
             {id:23,
               name:'ㄩ',
               pinyin:'[yu]',
+              pinyin_mark:'yu',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A9.WAV',
               type:'HeadVowel',
             },
             {id:24,
               name:'ㄚ',
               pinyin:'[a]',
+              pinyin_mark:'a',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%9A.WAV',
               type:'Vowel',
             },
             {id:25,
               name:'ㄛ',
               pinyin:'[o]',
+              pinyin_mark:'o',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%9B.WAV',
               type:'Vowel',
             },
             {id:26,
               name:'ㄜ',
               pinyin:'[e]',
+              pinyin_mark:'e',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%9C.WAV',
               type:'Vowel',
             },
             {id:27,
               name:'ㄝ',
               pinyin:'[ê]',
+              pinyin_mark:'ê',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%9D.WAV',
               type:'Vowel',
             },
             {id:28,
               name:'ㄞ',
               pinyin:'[ai]',
+              pinyin_mark:'ai',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%9E.WAV',
               type:'Vowel',
             },
             {id:29,
               name:'ㄟ',
               pinyin:'[ei]',
+              pinyin_mark:'ei',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%9F.WAV',
               type:'Vowel',
             },
             {id:30,
               name:'ㄠ',
               pinyin:'[ao]',
+              pinyin_mark:'ao',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A0.WAV',
               type:'Vowel',
             },
             {id:31,
               name:'ㄡ',
               pinyin:'[ou]',
+              pinyin_mark:'ou',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A1.WAV',
               type:'Vowel',
             },
             {id:32,
               name:'ㄢ',
               pinyin:'[an]',
+              pinyin_mark:'an',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A2.WAV',
               type:'Vowel',
             },
             {id:33,
               name:'ㄣ',
               pinyin:'[en]',
+              pinyin_mark:'en',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A3.WAV',
               type:'Vowel',
             },
             {id:34,
               name:'ㄤ',
               pinyin:'[ang]',
+              pinyin_mark:'ang',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A4.WAV',
               type:'Vowel',
             },
             {id:35,
               name:'ㄥ',
               pinyin:'[eng]',
+              pinyin_mark:'eng',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A5.WAV',
               type:'Vowel',
             },
             {id:36,
               name:'ㄦ',
               pinyin:'[er]',
+              pinyin_mark:'er',
               audio:'https://github.com/frankhsu519/Vue_phoneticnotation/raw/gh-pages/audio/%E3%84%A6.WAV',
               type:'Vowel',
             },
@@ -464,10 +508,25 @@
       selectType:'',
       screen_data:'',
       spell_:'',
+      spell_pinyin:'',
       current_spell_:'',
-      spell_spciel: [],
+      spell_array: [],
+      current_array:[],
+
+      // 顯示在螢幕上 
+      pinyin_str:'',
+      pinyin_arr:[],
 
     }),
+
+    watch:{
+      pinyin_str :function(){
+        this.pinyin_arr = this.pinyin_str.split('=')
+      }
+    },
+
+
+
     methods:{
       audio(item){
         var audio = new Audio(item.audio)
@@ -501,8 +560,17 @@
           this.screen_data = send_data.name;
         }
         else{
+          // 資料處理部分
           this.spell_ += send_data.name;
+          this.spell_pinyin += send_data.pinyin;
           this.current_spell_ += send_data.name;
+
+          // 顯示在螢幕部分
+          this.pinyin_str += send_data.pinyin_mark
+
+          console.log('這是spell_:',this.spell_);
+          console.log('current_spell_:',this.current_spell_);
+
         }
       },
       // spell_voice(send_spell){
@@ -526,8 +594,18 @@
       add_notes(send_notes){
         this.spell_ += send_notes.mark;
         this.current_spell_+= send_notes.mark;
-        this.spell_spciel.push(this.current_spell_);
+        this.current_array.push(this.current_spell_);
+
+        // test
+        this.pinyin_str += send_notes.mark;
+        this.pinyin_str += '='
+
+
+
+        this.spell_voice(this.current_array);
+        this.spell_array.push(this.current_spell_);
         this.current_spell_ ='';
+        this.current_array=[];
       },
       // find_first_voice(first_str,other_spell_str){
       //   for (let i = 0 ; i < this.spell_sound.length ; i++){
@@ -585,8 +663,10 @@
       },
       clear(){
         this.spell_= '';
+        this.spell_pinyin= '';
         this.current_spell_= '';
-        this.spell_spciel = [];
+        this.spell_array = [];
+        this.pinyin_str = '';
       },
 
       spell_voice(send_spell){
@@ -663,7 +743,10 @@
       }
     },
     mounted(){
-      this.fileter(this.type[0])
+      // 初始 設定 顯示全部注音
+      this.fileter(this.type[4])
+
+      // 先向 github 要音檔資訊
       this.getApi_data()
     }
   }
