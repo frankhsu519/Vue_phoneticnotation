@@ -103,32 +103,32 @@
     </v-row>
 
     <v-row class="teal accent-3 justify-center align-center text-h1 show_block" style="min-height:300px;">
-      <div v-if="selectType != 'Other'">
+      <div v-if="selectType != 'Free combination'">
         {{screen_data}}
       </div>
-      <div v-else>
+      <div v-else style="max-width: 85%;">
         {{spell_}}<br>
         <!-- {{spell_pinyin}} -->
 
-        <div style="display:flex;">
+        <div style="display:flex;flex-wrap:wrap;">
           <div v-for="(arr,i) in pinyin_arr " :key="i" v-show ="arr.length != 0">
             [{{arr}}] &nbsp;
           </div>
         </div>
       </div>
-      <div v-if="selectType == 'Other'" class="show_block_inside1">
+      <div v-if="selectType == 'Free combination'" class="show_block_inside1">
         <v-btn color="yellow" @click="spell_voice(spell_array)">
           voice
         </v-btn>
       </div>
-      <div v-if="selectType == 'Other'" class="show_block_inside3">
+      <div v-if="selectType == 'Free combination'" class="show_block_inside3">
         <v-btn color="red" @click="clear()">
           clear
         </v-btn>
       </div>
-      <div v-if="selectType == 'Other'" class="show_block_inside2">
+      <div v-if="selectType == 'Free combination'" class="show_block_inside2">
         <div class="d-inline-flex flex-column">
-          <v-btn color="red" v-for="notes in note" :key="notes.name" class="mb-3" @click="add_notes(notes)">
+          <v-btn color="red" v-for="notes in note" :key="notes.name" class="mb-3 voice_note" @click="add_notes(notes)">
             {{notes.name}}
           </v-btn>
         </div>
@@ -138,12 +138,13 @@
 
     <!-- 注音按鈕 -->
     <v-row>
-      <div class="d-flex flex-wrap justify-start">
+      <v-col col='12' class="d-flex flex-wrap justify-start">
         <v-btn v-for="(item,i) in filter_result" :key="i" class="box my-3 mx-2 text-lowercase" color='info' @click='audio(item)'>
-          {{item.name}}<br>
+          {{item.name}}
+          <br>
           {{item.pinyin}}
         </v-btn>
-      </div>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -157,6 +158,12 @@
     font-size: 30px !important;
     line-height: 120px;
     background-color:aqua;
+  }
+
+  @media screen and (max-width:1280px) {
+    .box{
+      width: calc(25% - 16px);
+    }
   }
 
   .show_block{
@@ -177,12 +184,13 @@
       right: 0;
       top:130px;
     }
-    &_inside4{
-      position: absolute;
-      right: 0;
-      bottom:0;
-    }
   }
+  
+  @media screen and (max-width:1280px) {
+      .voice_note{
+        width: 100px;
+      }
+    }
 
 </style>
 
@@ -210,7 +218,7 @@
               clicked:false,
             },
             {
-              name:'Other',
+              name:'Free combination',
               clicked:false,
             },
           ],
@@ -483,23 +491,23 @@
             },
       ],
       note:[{
-              name:'.(0)',
+              name:'.(0 sound)',
               mark:'˙',
             },
             {
-              name:' (1)',
+              name:' (1 sound)',
               mark:' ',
             },
             {
-              name:'ˊ(2)',
+              name:'ˊ(2 sound)',
               mark:'ˊ',
             },
             {
-              name:'ˇ(3)',
+              name:'ˇ(3 sound)',
               mark:'ˇ',
             },
             {
-              name:'ˋ(4)',
+              name:'ˋ(4 sound)',
               mark:'ˋ',
             },
           ],
@@ -540,8 +548,8 @@
         this.selectType = send_type.name ;
         if(this.selectType == 'All'){
           this.filter_result = [...this.test];
-        }else if(this.selectType == 'Other'){
-          alert('拼寫模式')
+        }else if(this.selectType == 'Free combination'){
+          alert('Free combination')
           this.filter_result = [...this.test];
         }else{
           this.filter_result = this.test.filter(data =>{
@@ -556,7 +564,7 @@
         send_type.clicked = true;
       },
       show_data(send_data){
-        if(this.selectType != 'Other'){
+        if(this.selectType != 'Free combination'){
           this.screen_data = send_data.name;
         }
         else{
@@ -568,8 +576,8 @@
           // 顯示在螢幕部分
           this.pinyin_str += send_data.pinyin_mark
 
-          console.log('這是spell_:',this.spell_);
-          console.log('current_spell_:',this.current_spell_);
+          // console.log('這是spell_:',this.spell_);
+          // console.log('current_spell_:',this.current_spell_);
 
         }
       },
@@ -658,7 +666,7 @@
           var audio = new Audio(send_data.audio)
             audio.play();
         }else{
-          alert('沒有此音檔')
+          alert('Sorry no this sound , 沒有此音檔')
         }
       },
       clear(){
@@ -670,14 +678,14 @@
       },
 
       spell_voice(send_spell){
-        console.log('送進來的',send_spell);
+        // console.log('送進來的',send_spell);
 
         var that = this;
 
         for (let i = 0 ; i < send_spell.length ;i++ ){
-          console.log(send_spell[i]);
+          // console.log(send_spell[i]);
           var that = this;
-          console.log('看一下轉化的東西',encodeURI(send_spell[i]));
+          // console.log('看一下轉化的東西',encodeURI(send_spell[i]));
           let send_Data = {};
           send_Data.toUnicode = encodeURI(send_spell[i])
           if(send_Data.toUnicode < encodeURI('ㄏㄟ ')){
@@ -744,7 +752,7 @@
     },
     mounted(){
       // 初始 設定 顯示全部注音
-      this.fileter(this.type[4])
+      this.fileter(this.type[0])
 
       // 先向 github 要音檔資訊
       this.getApi_data()
